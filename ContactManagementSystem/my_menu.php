@@ -22,7 +22,7 @@
 			<li><a href="selectbyyob.php">Order by year of birth</a></li> 
 			   (most recent first)
 			<li><a href="delete.php">Delete contact</a></li>
-			<li><a href="sel_byartist.php">ordered by artist</a></li>
+			<li><a href="editContact.php">Edit Contacts</a></li>
 		</ul>
 	</body>
 </html>

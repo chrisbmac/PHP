@@ -14,23 +14,22 @@
             function fetchByDate(){
                 require 'config.php';
                 $thisMonth = date("m");
-                //$thisMonth = date("Y-m-d");
-                echo 'this is this month'.$thisMonth;
-                //$query = $CONNECTION_STRING->prepare("SELECT * FROM contactscms WHERE MONTH()");
+                $todayDate = date("Y-m-d");
+                echo "<h3>". $todayDate."</h3>";
+                
                 $query = $CONNECTION_STRING->prepare("SELECT * FROM contactscms WHERE MONTH(yob) = $thisMonth");
                 $query->execute();
                 $dbArray = $query-> fetchAll();
-                //print_r($dbArray);
+                
                 foreach ($dbArray as $item){
-                    echo $item['fname'];
+                    echo "<div>" . $item['fname'] ." ". $item['lname']."<br>".$item['phone']."<br>".$item['email']."<br>"."-----------------"."<br>"."</div>";
                 }
                 
-                //print_r($dbArray);
+                
                 return $dbArray;
             }
             fetchByDate();
-            //echo "Today is " . date("Y-m-d") . "<br>";
-            //echo "Today is " . date("m") . "<br>";
+            
         ?>
 
     </body>
