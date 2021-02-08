@@ -231,7 +231,7 @@
             mail($item['email'], $subject, $body);
         }
         header("Location: my_menu.php");
-        //mail();
+        
     }
         
     
