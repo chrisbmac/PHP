@@ -172,8 +172,14 @@
         $query = $CONNECTION_STRING->prepare("SELECT * FROM contactscms WHERE contactID=:contactID");
         $query->bindParam(':contactID', $contactID);
         $query->execute();
-        $dbArray = $query->fetch();
-        return $dbArray;
+        $dbArray = $query->fetch(PDO::FETCH_ASSOC);
+        $newArr = [];
+        foreach($dbArray as $i){
+            $a = ltrim($i);
+            array_push($newArr, $a);
+        }
+        var_dump($newArr);
+        return $newArr;
     }
 
     // edit a single contact

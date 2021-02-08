@@ -3,38 +3,21 @@
 <html>
 	<head>
 		<title>My Menu</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	</head>
 	<body>
-        <form method="POST">
-        
-        </form>
-        <?php 
-            require 'model.php';
-            
-            /*function fetchByDate(){
-                require 'config.php';
-                $thisMonth = date("m");
+        <div class="container">
+            <?php 
+                require 'model.php';
                 $todayDate = date("Y-m-d");
-                echo "<h3>". $todayDate."</h3>";
-                
-                $query = $CONNECTION_STRING->prepare("SELECT * FROM contactscms WHERE MONTH(yob) = $thisMonth");
-                $query->execute();
-                $dbArray = $query-> fetchAll();
-                
+                echo "<h3>Todays Date: ". $todayDate."</h3>";
+                $dbArray = fetchByDate();
                 foreach ($dbArray as $item){
                     echo "<div>" . $item['fname'] ." ". $item['lname']."<br>".$item['phone']."<br>".$item['email']."<br>"."-----------------"."<br>"."</div>";
                 }
-                
-                
-                return $dbArray;
-            }*/
-            $todayDate = date("Y-m-d");
-            echo "<h3>". $todayDate."</h3>";
-            $dbArray = fetchByDate();
-            foreach ($dbArray as $item){
-                echo "<div>" . $item['fname'] ." ". $item['lname']."<br>".$item['phone']."<br>".$item['email']."<br>"."-----------------"."<br>"."</div>";
-            }
-        ?>
-        <a href="my_menu.php"><button>Go Back</button></a>
+            ?>
+            <a href="my_menu.php"><button class="btn-warning">Go Back</button></a>
+        </div>
     </body>
 </html>

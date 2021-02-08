@@ -9,24 +9,25 @@
 <html>
 	<head>
 		<title>My Menu</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	</head>
 	<body>
-		<form method="POST" action="logout.php">
-			<input type="submit" value="logout">
-		</form>
-		<h1>My Menu</h1>
-		<p><strong>My Music</strong></p>
-  
-		<ul>
-			<li><a href="add.php">Add contact</a></li>
-			<li><a href="selectbyyob.php">Order by year of birth</a></li> 
-			   (most recent first)
-			<li><a href="delete.php">Delete contact</a></li>
-			<li><a href="editContact.php">Edit Contacts</a></li>
-            <li><a href="email.php">Email Contacts</a></li>
-            <li><a href="download.php">Download Clients info</a></li>
-            <li><a href="upload.php">Upload Clients info</a></li>
-            
-		</ul>
+        <div class="container"> 
+            <form method="POST" action="logout.php">
+                <input class="btn-warning" type="submit" value="logout">
+            </form>
+            <h1>Main Menu</h1>
+    
+            <ul class="list-group">
+                <li class="list-group-item">><a href="add.php">Add contact</a></li>
+                <li class="list-group-item">><a href="selectbyyob.php">Order by year of birth</a></li> 
+                <li class="list-group-item">><a href="delete.php">Delete contact</a></li>
+                <li class="list-group-item">><a href="editContact.php">Edit Contacts</a></li>
+                <li class="list-group-item">><a href="email.php">Email Contacts</a></li>
+                <li class="list-group-item">><a href="download.php">Download Clients info</a></li>
+                <li class="list-group-item">><a href="upload.php">Upload Clients info</a></li>
+                
+            </ul>
+        </div>
 	</body>
 </html>
