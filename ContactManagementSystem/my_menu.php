@@ -23,6 +23,10 @@
 			   (most recent first)
 			<li><a href="delete.php">Delete contact</a></li>
 			<li><a href="editContact.php">Edit Contacts</a></li>
+            <li><a href="email.php">Email Contacts</a></li>
+            <li><a href="download.php">Download Clients info</a></li>
+            <li><a href="upload.php">Upload Clients info</a></li>
+            
 		</ul>
 	</body>
 </html>

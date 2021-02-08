@@ -15,5 +15,6 @@
         ?>
             <input type="submit" value="Edit">
         </form>
+        <a href="my_menu.php"><button>Go Back</button></a>
     </body>
 </html>

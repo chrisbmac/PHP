@@ -9,28 +9,28 @@
             <input type="hidden" name="from" value="add">
 
             <label>First Name:</label>
-            <input type="text" name="fname" required>
+            <input type="text" name="fname" pattern='[a-zA-Z0-9]+' minlength='2' maxlength='50' required>
 
             <label>Last Name:</label>
-            <input type="text" name="lname" required>
+            <input type="text" name="lname" pattern='[a-zA-Z0-9]+' minlength='2' maxlength='50' required>
 
             <label>Email:</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" minlength='10' maxlength='100' required>
 
             <label>Street Address:</label>
-            <input type="text" name="streetaddress" required>
+            <input type="text" name="streetaddress" minlength='2' maxlength='100' required>
 
             <label>City:</label>
-            <input type="text" name="city" required>
+            <input type="text" name="city" minlength='2' maxlength='100' required>
 
-            <label>Privince:</label>
-            <input type="text" name="province" required>
+            <label>Province:</label>
+            <input type="text" name="province" pattern='[a-zA-Z0-9]+' minlength='2' maxlength='100' required>
 
             <label>Postal Code:</label>
-            <input type="text" name="postalcode" required>
+            <input type="text" name="postalcode" pattern='[a-zA-Z0-9]+' minlength='7' maxlength='7' required>
 
             <label>Phone:</label>
-            <input type="number" name="phone" required>
+            <input type="number" name="phone" minlength='11' maxlength='12' required>
 
             <label>Year of Birth:</label>
             <input type="date" name="yob" required>

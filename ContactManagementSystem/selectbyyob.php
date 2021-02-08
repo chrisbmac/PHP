@@ -11,7 +11,7 @@
         <?php 
             require 'model.php';
             
-            function fetchByDate(){
+            /*function fetchByDate(){
                 require 'config.php';
                 $thisMonth = date("m");
                 $todayDate = date("Y-m-d");
@@ -27,10 +27,14 @@
                 
                 
                 return $dbArray;
+            }*/
+            $todayDate = date("Y-m-d");
+            echo "<h3>". $todayDate."</h3>";
+            $dbArray = fetchByDate();
+            foreach ($dbArray as $item){
+                echo "<div>" . $item['fname'] ." ". $item['lname']."<br>".$item['phone']."<br>".$item['email']."<br>"."-----------------"."<br>"."</div>";
             }
-            fetchByDate();
-            
         ?>
-
+        <a href="my_menu.php"><button>Go Back</button></a>
     </body>
 </html>
