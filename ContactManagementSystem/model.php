@@ -178,7 +178,6 @@
             $a = ltrim($i);
             array_push($newArr, $a);
         }
-        var_dump($newArr);
         return $newArr;
     }
 
@@ -220,13 +219,14 @@
     // email all contacts
     function email(){
         require 'config.php';
-        
+        $emailTo = $_POST['emailTO'];
+        //echo $emailTO;
         $body = wordwrap($_POST['body']);
         $subject = $_POST['subject'];
         $query = $CONNECTION_STRING->prepare("SELECT email FROM contactscms");
         $query->execute();
         $dbArray = $query-> fetchAll();
-        print_r($dbArray);
+        
         foreach($dbArray as $item){
             mail($item['email'], $subject, $body);
         }

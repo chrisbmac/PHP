@@ -26,7 +26,7 @@
                 <li class="list-group-item">><a href="email.php">Email Contacts</a></li>
                 <li class="list-group-item">><a href="download.php">Download Clients info</a></li>
                 <li class="list-group-item">><a href="upload.php">Upload Clients info</a></li>
-                
+                <li class="list-group-item">><a href="showall.php">Display All</a></li>
             </ul>
         </div>
 	</body>
