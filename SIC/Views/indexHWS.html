@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How much are you spending</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./site.css">
+</head>
+    <body>
+        <div class="container"> 
+                <h4>Find out how much you could have saved, but didnt..</h4>
+                <form method="POST" action="./router.php">
+                    
+                    <input class="form-control" type="hidden" name="request_url" value="/HWS">
+                    <div class="mb-3">
+                        <label class="form-label">Starting Age:</label>
+                        <input class="form-control" type="number" name="startAge" placeholder="5" aria-label="5" required>
+                    </div>
+                    <div class="mb-3"> 
+                        <label class="form-label">Till what Age?:</label>
+                        <input class="form-control" type="number" name="endAge" placeholder="65" aria-label="65" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">How often would you want to save (e.g., how often you were putting money away)?</label>
+                        <div class="form-check form-switch"> 
+                            <input class="form-check-input" type="radio" name="howOften" value="daily" checked>Daily:
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="radio" name="howOften" value="weekly">Weekly:
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="radio" name="howOften" value="monthly">Monthly:
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">How much money were you putting away at a time:</label>
+                        <input class="form-control" type="number" name="money" placeholder="$$" aria-label="$$" required>
+                    </div>
+                    <div class="mb-3">
+                        <input class="btn btn-success" type="submit" value="Check">
+                    </div>
+                
+                </form>
+                <form method="POST" action="./router.php" class="form-group">
+                    <input type="hidden" name="request_url" value="/">
+                    <input class="btn btn-warning" type="submit" value="Go Back">
+                </form>
+        </div>
+    </body>
+</html>

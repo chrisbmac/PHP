@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How much are you spending</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./site.css">
+</head>
+    <body>
+        <div class="container"> 
+            <h4>Find out how much money you spend on certain items in a year.</h4>
+            <form method="POST" action="./router.php">
+                
+                    <input type="hidden" name="request_url" value="/calcMS">
+                    <label>The expenses name:</label>
+                    <input class="form-control " type="text" name="expense_name" pattern="[a-zA-Z]{1,}" required >
+                
+                    <label>Cost: </label>
+                    <input class="form-control" type="number" step="0.01" name="cost_item" required>
+                
+                    <label>How many times is this purchased in a MONTH?:</label>
+                    <input class="form-control" type="number" name="numTimes_purchasedMonth" required>
+                
+                    <input class="btn btn-success" type="submit" value="Check">
+                    
+                   
+            </form>
+            <form method="POST" action="./router.php" class="form-group">
+                <input type="hidden" name="request_url" value="/">
+                <input type="submit" value="Go Back">
+            </form>
+            
+        </div>
+    </body>
+</html>
