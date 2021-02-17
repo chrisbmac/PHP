@@ -1,0 +1,9 @@
+body {
+    font-size: larger;
+}
+
+input{
+    margin-bottom: 5px;
+    max-width: 200px;
+    
+}
