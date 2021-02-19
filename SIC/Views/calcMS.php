@@ -64,9 +64,12 @@
                 Total Cost Per Year: <strong>$<?php echo $totalExp_Year?></strong>
             </div>
             <div>
-                <form method="POST" action="index.php">
-                    <input type="submit" value="Go Back">
+            <div class="container">
+                <form method="POST" action="./router.php" class="form-group">
+                    <input type="hidden" name="request_url" value="/indexCalcMS">
+                    <input class="btn-warning" type="submit" value="Go Back">
                 </form>
+            </div>
             </div>
         </div>
     </body>
