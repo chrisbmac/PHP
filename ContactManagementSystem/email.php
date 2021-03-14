@@ -6,20 +6,23 @@
     </head>
     <body>
         <div class="container">
-            <h3>Send an email to clients</h3>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><h3>Send an email to your clients</h3></nav>
+        <br>
             <form method="POST" action="model.php" class="form-group">
                 <input type="hidden" name="from" value="email">
                 <div>
-                <label>Subject:</label>
-                <input class="form-control" type="text" name="subject" required>
+                <label class="form-label">Subject:</label>
+                <input class="form-control" style="width: 450px;" type="text" name="subject" required>
                 </div>
                 <div>
-                <label>Body:</label>
-                <textarea class="form-control" name="body" required></textarea>
-                <input class="btn-success" type="submit" value="Send Email">
+                <label class="form-label">Body:</label>
+                <textarea class="form-control" style="width: 450px; height:500px;" name="body" required></textarea>
+                <br>
+                <input class="btn btn-success" type="submit" value="Send Email">
                 </div>
             </form>
-            <a href="my_menu.php"><button class="btn-warning">Cancel</button></a>
+
+            <a href="my_menu.php"><button class="btn btn-warning">Cancel</button></a>
         </div>
     </body>
 </html>

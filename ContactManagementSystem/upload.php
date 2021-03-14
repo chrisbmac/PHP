@@ -6,18 +6,19 @@
 	</head>
 	<body>
         <div class="container">
-        <h3>Upload a CSV</h3>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><h3>Upload a CSV</h3></nav><br>
             <form method="POST" action="model.php" enctype="multipart/form-data" class="form-group">
                 <div>
+                <h5>Upload a file with contacts information.</h5><br>
                 <input type="hidden" name="from" value="file">
                 </div>
                 <div>
-                <label>Upload your file:</label>
+                <label class="text-secondary">Upload your file:</label>
                 <input class="btn-info" type="file" name="file" required>
                 </div>
-                <input class="btn-success" type="submit" value="Upload">
+                <input class="btn btn-success" type="submit" value="Upload">
             </form>
-            <a href="my_menu.php"><button class="btn-warning">Go Back</button></a>
+            <a href="my_menu.php"><button class="btn btn-warning">Go Back</button></a>
         </div>
 	</body>
 </html>

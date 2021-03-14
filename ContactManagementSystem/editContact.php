@@ -7,18 +7,23 @@
 	</head>
     <body>
         <div class="container">
-        <h3>Select a contact to edit</h3>
-            <form method="POST" action="submitEdit.php" class="from-group">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"><h3>Select a contact to edit</h3></nav>
+        <div class="text-secondary">---------------------------------------</div>
+            <form method="POST" action="submitEdit.php" class="form-group">
             <?php
                 include 'model.php';
                 $arr = displayAll();
                 foreach($arr as $i){
-                    echo "<div class='form-control'>"."<input class='form-check-input' type='radio' name='editConRad' value='{$i['contactID']}' >".$i['fname'] . $i['lname']. "</div>";
+                    echo "<div>"."<input class='btn-check' type='radio' name='editConRad' id='{$i['contactID']}' value='{$i['contactID']}' >"."<label class='btn btn-secondary' for='{$i['contactID']}'>".$i['fname']." " . $i['lname']."</label>" ."</div>";
                 }
             ?>
-                <input class="btn-success" type="submit" value="Edit">
+            <div class="text-secondary">---------------------------------------</div>
+                <br>
+                <input class="btn btn-success" type="submit" value="Edit">
             </form>
-            <a href="my_menu.php"><button class="btn-warning">Go Back</button></a>
+            
+            <a href="my_menu.php"><button class="btn btn-warning">Go Back</button></a>
+        
         </div>
     </body>
 </html>

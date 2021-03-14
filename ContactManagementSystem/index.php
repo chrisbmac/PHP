@@ -11,15 +11,17 @@
     </head>
 	<body>
         <div class="container">
-        <h3>Login</h3>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <h3>Login To Contact Management System</h3>
+            </nav>
             <form method="POST" action="login.php" class="form-group">
-                <label>Email</label>
-                <input class="form-control" type="text" name="email" min-length="8" required>
+                <label>User Name</label>
+                <input class="form-control" style="width:300px;" type="text" name="email" min-length="8" required>
             
                 <label>Password</label>
-                <input class="form-control" type="password" name="password" required>
+                <input class="form-control" style="width:300px;" type="password" name="password" required>
                 <br>
-                <input type="submit" value="Login" class="btn-success">
+                <input type="submit" value="Login" class="btn btn-success">
             </form>
         </div>
 

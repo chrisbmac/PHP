@@ -10,9 +10,14 @@
 	</head>
 	<body>
 		<div class="container">
-		<h3>Down CSV with All Client information</h3>
-    		<a href="my_menu.php"><button class="btn-warning">Go Back</button></a>
-    		<a href="files/dlClients.csv" download><button class="btn-success">Download</button></a>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light"><h3>Down CSV with All Client information</h3></nav>
+			<div>
+				<h5>Click here to download your contacts information</h5>
+					<a href="files/dlClients.csv" download><button class="btn btn-success">Download</button></a>
+			</div><br>
+			<div>
+				<a href="my_menu.php"><button class="btn btn-warning">Go Back</button></a>
+			</div>
 		</div>
 	</body>
 </html>
